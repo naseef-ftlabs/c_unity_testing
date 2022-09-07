@@ -1,15 +1,17 @@
 pipeline {
   agent any
   stages {
-    stage('Buzz Buzz') {
+    stage('Satrting Docker') {
       steps {
-        echo 'Bees Buzz!'
+        sh '''docker run -it --rm -v "/home/naseef-ftlabs/rawtesting/c_unity_testing":/project throwtheswitch/madsciencelab
+'''
       }
     }
 
-    stage('Buzz Buzz3') {
+    stage('Test ADC Conductor') {
       steps {
-        echo 'gtdnbxgn'
+        sh '''ceedling test:TestAdcConductor
+'''
       }
     }
 
