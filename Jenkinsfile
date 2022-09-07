@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Satrting Docker') {
+    stage('Starting Docker') {
       steps {
-        sh '''docker run -it --rm -v "/home/naseef-ftlabs/rawtesting/c_unity_testing":/project throwtheswitch/madsciencelab
+        sh '''docker run -it --rm -v "/var/lib/jenkins/workspace/c_unity_testing_master":/project throwtheswitch/madsciencelab
 '''
       }
     }
