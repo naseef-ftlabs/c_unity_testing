@@ -2,16 +2,38 @@ pipeline {
   agent any
   stages {
     stage('Docker usermod') {
-      steps {
-        sh '''sudo usermod -aG docker ${USER}
+      parallel {
+        stage('Docker usermod') {
+          steps {
+            sh '''sudo usermod -aG docker ${USER}
 '''
+          }
+        }
+
+        stage('password') {
+          steps {
+            sh 'ftlabs'
+          }
+        }
+
       }
     }
 
     stage('Docker su') {
-      steps {
-        sh '''su -s ${USER}
+      parallel {
+        stage('Docker su') {
+          steps {
+            sh '''su -s ${USER}
 '''
+          }
+        }
+
+        stage('password') {
+          steps {
+            sh 'ftlabs'
+          }
+        }
+
       }
     }
 
