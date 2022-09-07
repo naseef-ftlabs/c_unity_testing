@@ -6,7 +6,7 @@ pipeline {
         sh '''sudo usermod -aG docker ${USER}
 '''
       }
-    }  
+    }
 
     stage('Docker su') {
       steps {
