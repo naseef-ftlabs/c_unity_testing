@@ -1,0 +1,6 @@
+---
+- "/usr/local/bundle/gems/ceedling-0.31.1/vendor/unity/src/unity.h"
+- src/Types.h
+- src/AdcHardware.h
+- build/test/mocks/MockAdcHardwareConfigurator.h
+- build/test/mocks/MockAdcTemperatureSensor.h

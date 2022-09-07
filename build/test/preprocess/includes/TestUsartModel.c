@@ -1,0 +1,7 @@
+---
+- "/usr/local/bundle/gems/ceedling-0.31.1/vendor/unity/src/unity.h"
+- src/Types.h
+- src/UsartModel.h
+- src/ModelConfig.h
+- build/test/mocks/MockTemperatureFilter.h
+- build/test/mocks/MockUsartBaudRateRegisterCalculator.h
