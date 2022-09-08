@@ -5,6 +5,10 @@ pipeline {
       steps {
         sh '''whoami && docker run --rm -v "/var/lib/jenkins/workspace/c_unity_testing_master":/project throwtheswitch/madsciencelab
 '''
+        steps{
+          sh '''ceedling test:all
+  '''
+        }
       }
     }
 
