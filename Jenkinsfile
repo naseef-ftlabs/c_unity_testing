@@ -1,19 +1,13 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('Starting Docker Cont.') {
+      agent {
+        docker { image 'throwtheswitch/madsciencelab' }
+      }
       steps {
-        sh '''whoami && docker run --rm -v "/var/lib/jenkins/workspace/c_unity_testing_master":/project throwtheswitch/madsciencelab
-'''
+        sh 'ceedling"
       }
     }
-
-    stage('Test ADC Conductor') {
-      steps {
-        sh '''ceedling test:TestAdcConductor
-'''
-      }
-    }
-
   }
 }
