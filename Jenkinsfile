@@ -6,7 +6,7 @@ pipeline {
         docker { image 'throwtheswitch/madsciencelab' }
       }
       steps {
-        sh 'ceedling"
+        sh 'ceedling'
       }
     }
   }
