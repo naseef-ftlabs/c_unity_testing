@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Starting Docker Cont.') {
       steps {
-        sh '''docker run --rm -v ""/var/lib/jenkins/workspace/c_unity_testing_master"":/project throwtheswitch/madsciencelab
+        sh '''docker run --rm -v "/var/lib/jenkins/workspace/c_unity_testing_master":/project throwtheswitch/madsciencelab
 '''
       }
     }
